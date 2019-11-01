@@ -9,9 +9,10 @@ class Kehadiran(models.Model):
         ('hadir', 'Hadir'),
     )
 
-    karyawan = models.ForeignKey(Karyawan)
+    karyawan = models.ForeignKey(Karyawan, on_delete=models.PROTECT)
     jenis_kehadiran = models.CharField(max_length=20, choices=JENIS_KEHADIRAN_CHOICE)
     waktu = models.DateField()
+
 
     def __unicode__(self):
         return self.karyawan.nama

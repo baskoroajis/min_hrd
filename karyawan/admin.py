@@ -2,7 +2,6 @@ from django.contrib import admin
 from karyawan.models import *
 
 class DivisiAdmin(admin.ModelAdmin):
-    print('as')
     list_display = ['nama', 'keterangan']
     list_filter = ()
     search_fields = ['nama','keterangan']
@@ -13,7 +12,6 @@ admin.site.register(Divisi,DivisiAdmin)
 
 
 class JabatanAdmin(admin.ModelAdmin):
-    print('as')
     list_display =  ['nama', 'keterangan']
     list_filter = ()
     search_fields = []
